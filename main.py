@@ -67,7 +67,7 @@ def lessons_catalog():
     user = User.query.filter_by(username=session['username']).first()
     return render_template("lessons_catalog.html", lessons=lessons, user=user)
 
-# Роути для реєстрації
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -98,7 +98,7 @@ def login():
                 # Якщо користувач - звичайний
                 return redirect(url_for('user_dashboard'))
         else:
-            flash('Логін або пароль некоректні')
+            flash('Логін або пароль некоректнi')
             return render_template(url_for('login'))
     return render_template('login.html')
 
@@ -166,7 +166,7 @@ def create_lesson():
             db.session.commit()
             return redirect("/lessons_catalog")
         except Exception as e:
-            return f"Виникла помилка: {str(e)}"
+            return f"Виникла помилкa: {str(e)}"
     else:
         return render_template("create_lesson.html", user=user, lessons=lessons)
                            
