@@ -1,0 +1,21 @@
+<td>
+<select class="form-select" id="state" required="">
+    <option value="">Обрати категорію</option>
+    <option>Кислоти</option>
+    <option>Основи</option>
+    <option>Солі</option>
+    <option>Оксиди</option>
+    <option>Метали</option>
+    <option>Неметали</option>
+    <option>Гази</option></select
+><br />
+</td>
+
+Column 'lesson.substance_id' is marked as a member of the primary key for table 'lesson', 
+but has no Python-side or server-side default generator indicated, nor does it indicate 
+'autoincrement=True' or 'nullable=True', and no explicit value is passed.  Primary key columns 
+typically may not store NULL. Note that as of SQLAlchemy 1.1, 'autoincrement=True' must be indicated 
+explicitly for composite (e.g. multicolumn) primary keys if AUTO_INCREMENT/SERIAL/IDENTITY behavior 
+is expected for one of the columns in the primary key. CREATE TABLE statements are impacted by this 
+change as well on most backends.
+  db.session.commit()
