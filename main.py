@@ -98,7 +98,7 @@ def login():
                 # Якщо користувач - звичайний
                 return redirect(url_for('user_dashboard'))
         else:
-            flash('Логін або пaроль некоректні')
+            flash('Логін aбо пaроль некоректні')
             return render_template(url_for('login'))
     return render_template('login.html')
 
@@ -124,7 +124,7 @@ def user_dashboard():
 
 @app.route('/logout')
 def logout():
-    # Вихід з облікового запису
+    
     session.pop('username', None)
     return redirect(url_for('index'))
 
