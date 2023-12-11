@@ -98,7 +98,7 @@ def login():
                 # Якщо користувач - звичайний
                 return redirect(url_for('user_dashboard'))
         else:
-            flash('Логін або пароль некоректні')
+            flash('Логін або пaроль некоректні')
             return render_template(url_for('login'))
     return render_template('login.html')
 
@@ -166,7 +166,7 @@ def create_lesson():
             db.session.commit()
             return redirect("/lessons_catalog")
         except Exception as e:
-            return f"Виникла помилка: {str(e)}"
+            return f"Виниклa помилкa: {str(e)}"
     else:
         return render_template("create_lesson.html", user=user, lessons=lessons)
                            
@@ -215,7 +215,7 @@ def update_lesson(id):
             return redirect("/lessons_catalog")
 
         except:
-            return "Виникла помилка"
+            return "Виниклa помилкa"
     else:
         return render_template("lesson_update.html", lesson=lesson, user=user)
 
